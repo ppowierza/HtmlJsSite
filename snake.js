@@ -21,9 +21,10 @@ let food = {
 }
 
 let score = 0;
+document.addEventListener("keydown",direction);
 let d;
 
-document.addEventListener("keydown",direction);
+
 
 function direction(event){
     let key = event.keyCode;
@@ -61,10 +62,10 @@ function draw()
 
     //snake.pop();
 
-    if(d = "LEFT"){snakeX -= box;         score++;} 
-    if(d = "UP"){ snakeY -= box; score--;}
-    if(d = "RIGHT") {snakeX += box;}
-    if(d = "DOWN") {snakeY += box;}
+    if(d == "LEFT"){snakeX -= box;} 
+    if(d == "UP"){ snakeY -= box;}
+    if(d == "RIGHT") {snakeX += box;}
+    if(d == "DOWN") {snakeY += box;}
 
 
     if(snakeX == food.x && snakeY == food.y){
@@ -85,6 +86,10 @@ function draw()
     ctx.fillStyle ="white";
     ctx.font ="34px Changa one";
     ctx.fillText(score,2*box,1.6*box);
+
+    ctx.fillStyle ="#005500";
+    ctx.font ="34px Changa one";
+    ctx.fillText("PP",16*box,1.6*box);
 
 }
 
