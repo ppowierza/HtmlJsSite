@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Index 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        function myfunction(){
+            $("#nav-placeholder").load('nav.html');
+
+        };
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #menu {
+            background-color: #999999;
+            padding: 30px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <div id="nav-placeholder">
+        </div>
+    </div>
+
+    <form action="index3.html">
+        <input type="submit" value="Powrót" />
+        <input type="button" onclick="myfunction()"/>
+    </form>
+    <p id="demo">re</p>
+    <p id="demo2">re</p>
+</body>
+
+</html>
